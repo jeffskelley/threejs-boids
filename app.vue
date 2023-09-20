@@ -1,15 +1,15 @@
 <script setup>
-import { useWebGLStore } from "~/store/webgl";
+import { useWebGLStore } from '~/store/webgl'
 
-const { $webglManager } = useNuxtApp();
+const { $webglManager } = useNuxtApp()
 
-const webglStore = useWebGLStore();
+const webglStore = useWebGLStore()
 watchEffect(async () => {
   if (webglStore.isInitialized) {
-    await $webglManager.loadScene("home");
-    $webglManager.activateScene("home");
+    await $webglManager.loadScene('curl')
+    $webglManager.activateScene('curl')
   }
-});
+})
 </script>
 
 <template>
